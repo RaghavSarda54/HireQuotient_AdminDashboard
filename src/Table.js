@@ -163,7 +163,7 @@ const UserDetailsTable = () => {
           </button>
         </div>
       </div>
-      <div className="container flex-col mx-auto pl-8 pr-8">
+      <div className="container flex-col mx-auto px-4 sm:px-6 lg:px-8">
         <div className="bg-white shadow-md rounded-md mt-3 md-2">
           <table className="min-w-max w-full table-auto">
             <thead className="">
@@ -171,15 +171,24 @@ const UserDetailsTable = () => {
                 <th>
                   <input
                     type="checkbox"
-                    className="w-5 h-5 hover:cursor-pointer"
+                    className="w-5 h-5 hover:cursor-pointer whitespace-nowrap font-medium"
                     onChange={handleMainCheckboxChange}
                     checked={allChecked}
+                    style={{ position: "absolute", top: "80px", left: "64px" }}
                   />
                 </th>
-                <th className="py-3 px-6 text-left">Name</th>
-                <th className="py-3 px-6 text-left">Email</th>
-                <th className="py-3 px-6 text-left">Role</th>
-                <th className="py-3 px-6 text-left">Actions</th>
+                <th className="py-3 px-6 text-left whitespace-nowrap font-medium">
+                  Name
+                </th>
+                <th className="py-3 px-6 text-left whitespace-nowrap font-medium">
+                  Email
+                </th>
+                <th className="py-3 px-6 text-left whitespace-nowrap font-medium">
+                  Role
+                </th>
+                <th className="py-3 px-6 text-left whitespace-nowrap font-medium">
+                  Actions
+                </th>
               </tr>
             </thead>
             <tbody className="text-gray-600 text-sm font-light">
