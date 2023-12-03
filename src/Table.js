@@ -279,9 +279,16 @@ const UserDetailsTable = () => {
         </div>
       </div>
 
-      <div className="pagination flex justify-center mt-3">
+      <div className="pagination flex mt-3 px-8">
+        <div className="flex-grow">
+          <p className="text-gray-600">
+            {selectedRows.length} of {filteredUsers.length} rows selected
+          </p>
+        </div>
+
         <div>
           <Pagination
+            className="justify-end mr-4"
             count={Math.ceil(filteredUsers.length / usersPerPage)}
             page={currentPage}
             onChange={handlePageChange}
